@@ -6,7 +6,6 @@ import App from "./App.jsx";
 import Home from "./pages/Home/Home.jsx";
 import Video from "./pages/Video/Video.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import SearchResult from "./components/SearchResults/SearchResult.jsx";
 
 const router = createBrowserRouter([
   {
@@ -20,10 +19,6 @@ const router = createBrowserRouter([
       {
         path: "/videos/:categoryId/:videoId",
         element: <Video />,
-      },
-      {
-        path: "/search/:query",
-        element: <SearchResult />,
       },
     ],
   },

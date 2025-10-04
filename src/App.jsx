@@ -8,14 +8,15 @@ function App() {
 
   const toggleSideBar = () => {
     setIsAlternateSidebar((prev) => !prev);
-    console.log("Menu Butoon CLicked");
+    console.log("Menu Button Clicked");
   };
 
   return (
     <>
       <Navbar toggleSideBar={toggleSideBar} setSearchData={setSearchData} />
 
-      <Outlet context={(isAlternateSidebar, searchData)} />
+      {/* Fixed: Pass as object instead of using comma operator */}
+      <Outlet context={{ isAlternateSidebar, searchData }} />
     </>
   );
 }
